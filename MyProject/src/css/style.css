@@ -1,3 +1,44 @@
+
+.preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  background-color: #21D4FD;
+      background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
+      z-index: 1001;
+      color: #eee;
+}
+
+.preloader__image {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 70px;
+  height: 70px;
+  margin-top: -35px;
+  margin-left: -35px;
+  text-align: center;
+  animation: preloader-rotate 2s infinite linear;
+}
+
+@keyframes preloader-rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loaded_hiding .preloader {
+  transition: 1s opacity;
+  opacity: 0;
+}
+
+.loaded .preloader {
+  display: none;
+}
+
 body{
     font-family: Ariel, sans-serif;
 }
@@ -5,6 +46,7 @@ nav{
     width: 100%;
     height: 60px;
     background: #344051;
+    position: fixed;
 }
 .logo{
     color: #fff;
@@ -12,10 +54,20 @@ nav{
     line-height: 60px;
     padding-left: 388px;
     float: left;
+    -webkit-animation: comming 2s ease;
+    -o-animation: comming 2s ease;
+    animation: comming 2s ease;
 }
+
+
 .menu{
     float: left;
     padding-left: 432px;
+    
+}
+.menu ul{
+     float: left;
+    margin-left: 432px;
 }
 .menu li{
     float: left;
@@ -24,23 +76,36 @@ nav{
     margin-right: 40px;
     font-size: 16px;
     text-transform: uppercase;
-    
+    -webkit-animation: topshift 0.4s ease forwards;
+    -o-animation: topshift 0.4s ease forwards;
+    animation: topshift 0.4s ease forwards;
+    opacity: 0;
 }
 .main{
     width: 100%;
-    height: calc(100% - 60px);
+    height: 100%;
     background: url(../img/guy.png) 90% 100%/auto 85% no-repeat, url(../img/fon.jpg) center/cover no-repeat;
 }
 .title__container{
     float: left;
     margin: 432px 0px 0px 404px;
     color: #2c384a;
-    text-align: center;   
-    
+    opacity: 0;
+    text-align: center; 
+    -webkit-animation: titlemove 1s ease forwards;
+    -o-animation: titlemove 1s ease forwards;
+    animation: titlemove 1s ease forwards;
+    -webkit-animation-delay: 2.4s;
+    -o-animation-delay: 2.4s;
+    animation-delay: 2.4s;
+     
 }
 .title__container h1{
     font-size: 66px;
     font-weight: bold;
+    text-shadow: 
+      2px 2px 0px #d5d5d5, 
+      4px 4px 0px rgba(0, 0, 0, 0.2);
 }
 .title__container h4{
     margin-top: 40px;
@@ -58,6 +123,80 @@ nav{
     padding: 0px 16px;
     margin: 58px 14px 0px 14px;   
 }
+
+.menu li a{
+   transition: all 0.1s; 
+    color: white;
+    transform: scale(1);
+    display: inline-block;
+}
+.menu li a:visited{
+    color: white;
+}
+.menu li a:hover{
+   color: #e88604;
+}
+.menu li a:active{
+     transform: scale(1.1);
+}
+.title__container input{
+    transition: all 0.2s;
+    transform: scale(1);
+}
+.title__container input:hover{
+    background: #344051;
+    color: white;
+}
+
+.title__container input:active{
+    transform: scale(1.1);
+}
+
+@keyframes comming{
+    from{
+        opacity: 0;
+    }   
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes topshift{
+    from{
+        opacity: 0;
+        margin-top: -80px;
+}
+    to{
+        opacity: 1;
+        margin-top: 0px;
+    }
+}
+.menu li:nth-child(2){
+    animation-delay: 0.4s;
+}
+.menu li:nth-child(3){
+    animation-delay: 0.8s;
+}
+.menu li:nth-child(4){
+    animation-delay: 1.2s;
+}
+.menu li:nth-child(5){
+    animation-delay: 1.6s;
+}
+.menu li:nth-child(6){
+    animation-delay: 2.0s;
+}
+
+@keyframes titlemove{
+    from{
+        opacity: 0;
+        margin-left: -500px;
+}
+    to{
+        opacity: 1;
+        margin-left: 404px;
+    }
+    }
 .title h3{
     font-weight: bold;
     text-align: center; 
@@ -92,6 +231,7 @@ nav{
 
 .download{
     text-align: center;
+    
 }
  
 .download input{
@@ -106,8 +246,12 @@ nav{
     background-position: 10px 7px;
     text-indent: 20px;
     margin-bottom: 90px;
- 
 }
+
+ .download input:active{
+     transform: scale(1.1);
+}
+
 
 .title1 h3{
     font-weight: bold;
@@ -145,11 +289,7 @@ nav{
     margin-top: 36px;
     font-weight: bold;
 }
-.back{
-    background: url(../img/fon1.jpg) center/cover no-repeat;
-    width: 100%;
-    height: 524px;
-}
+
 .title2 h3{
     text-align: center; 
     color: #263244;
@@ -223,11 +363,29 @@ nav{
     font-weight: bold;
     margin-top: 27px;
 }
+ .site input:active{
+     transform: scale(1.1);
+}
+section {
+  width: 100%;
+height: 100vh;
+box-sizing: border-box;}
+
+section.sec1 {
+  background: url(../img/fon1.jpg) no-repeat center / cover;
+    background-attachment: fixed;
+    height: 524px;
+}
+
+section.sec2 {
+  background-color: white;
+    background-attachment: fixed;}
+
 .calculate h2{
     text-align: center;
     font-weight: bold;
     font-size:  40px;
-    margin-top: 202px;
+    margin-top: 404px;
     color: #1c2534;
     margin-bottom: 56px;
 }
@@ -416,6 +574,12 @@ hr{
     margin-left: 304px;
     margin-top: 10px;
 } 
+.send input:hover{
+   color: #e88604;
+}
+.send input:active{
+     transform: scale(1.1);
+}
 .list{
     text-align: center;
     
@@ -439,3 +603,4 @@ hr{
     font-size:  13px;
     padding-top:  42px;
 }
+
