@@ -294,7 +294,7 @@ section.sec1 {
  .pr p, .pr1 p{
     color: #2f4154;
     font-size: 14px;
-    margin-right: 100px;
+
 }
 .site input{
    height: 45px;
@@ -336,16 +336,15 @@ section.sec1 {
 .box hr{
     margin-top: 40px;
 }
-.cost{
+.box{
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+   
 }
 .form-select{
     background: #eeeeee;
     height: 50px;
 }
 .smile , .scobki , .gal , .kubok{
-    padding-right: 20px;
-    padding-left: 20px;
     padding-bottom: 102px;
     font-size:  16px;
      color: #2f4154;
