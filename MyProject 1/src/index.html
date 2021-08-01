@@ -22,16 +22,6 @@
     </path>
   </svg>
 </div>
-<script>
-  window.onload = function () {
-    document.body.classList.add('loaded_hiding');
-    window.setTimeout(function () {
-      document.body.classList.add('loaded');
-      document.body.classList.remove('loaded_hiding');
-    }, 500);
-  }
-</script>
-
 <header>
   
     <nav>
@@ -165,31 +155,34 @@ facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commod
       <div class="col-xxl-12 col-lg-12 px-5">
        <h2>Расчёт стоимости</h2>
         <h4>ТИП САЙТА</h4>
-        <select class="form-select" aria-label="Default select example">
+        <select class="form-select" aria-label="Default select example" id="site">
   <option selected>Выберите пункт...</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
+  <option value="1000">Сайт-визитка</option>
+  <option value="2000">Сайт-портал</option>
+  <option value="3000">Интернет-магазин</option>
 </select>
     
         <h4>ДИЗАЙН</h4>
-        <select class="form-select" aria-label="Default select example">
+        <select class="form-select" aria-label="Default select example" id="design">
   <option selected>Выберите пункт...</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
+  <option value="1000">Индивидуальный</option>
+  <option value="2000">Готовый</option>
 </select>
     <h4>АДАПТИВНОСТЬ</h4>
-         <select class="form-select" aria-label="Default select example">
+         <select class="form-select" aria-label="Default select example" id="adaptive">
   <option selected>Выберите пункт...</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
+  <option value="1000">Адаптивный сайт</option>
+  <option value="2000">Мобильная версия</option>
+  <option value="3000">Версия только для пк</option>
 </select>
     <hr>
-        <h5>Сроки</h5>
-        <h5>Стоимость</h5>
-<div class="site text-center pb-5"><input type="submit" value="Оставить заявку">
+        <div class="row">
+       <div class="cost col-3" ><h5>Сроки</h5></div>
+       <div class="cost1 col-3 offset-6 text-center" id="itogo1" >0 д.</div></div>
+        <div class="row">
+       <div class="cost col-3" ><h5>Стоимость</h5></div>
+       <div class="cost1 col-3 offset-6 text-center" id="itogo" >0 р.</div></div>
+<div class="site text-center pb-5"><input type="button" onclick="calculate()" value="Оставить заявку">
     </div>
      </div></div></div></div></div>
      <section class="stat">
@@ -291,7 +284,9 @@ facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commod
     <p>Copyright © 2021 Андрей Браун. Design by Web</p>
 </div>
     </footer>
-    <script src="js/javascript.js"></script>
-<script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/myscript.js"></script>
+
 </body>
 </html>
