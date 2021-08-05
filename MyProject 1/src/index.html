@@ -11,10 +11,10 @@
      <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
    <link rel="stylesheet" href="css/font-awesome.css">
+   <link rel="stylesheet" href="css/magnific-popup.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    
+<body> 
 <div class="preloader">
   <svg class="preloader__image" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
     <path fill="currentColor"
@@ -30,12 +30,12 @@
                <div class="col-xxl-2 col-lg-3 col-7"> <div class="logo">Юлия Власихина</div></div>
                <div class="px-0 col-xxl-6 col-xl-7 col-lg-8 offset-xxl-4 offset-xl-2 offset-lg-1 d-none d-lg-block"> <div class="menu">
            <ul>
-            <li><a href="#">Обо мне</a></li>
-            <li><a href="#">Услуги</a></li>
-            <li><a href="#">Кейсы</a></li>
-            <li><a href="#">Прайс</a></li>
-            <li><a href="#">Отзывы</a></li>
-            <li><a href="#">Контакты</a></li>
+            <li><a href="#about">Обо мне</a></li>
+            <li><a href="#whatican">Услуги</a></li>
+            <li><a href="#sec2">Кейсы</a></li>
+            <li><a href="#cost">Прайс</a></li>
+            <li><a href="#sec3">Отзывы</a></li>
+            <li><a href="#contacts">Контакты</a></li>
         </ul></div>  </div>
           <div class="col-5 d-flex d-lg-none flex-column justify-content-center align-items-end">
            <div class="dropdown">
@@ -43,12 +43,12 @@
    Навигация
  </a>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-            <li><a class="dropdown-item" href="#">Обо мне</a></li>
-            <li><a class="dropdown-item" href="#">Услуги</a></li>
-            <li><a class="dropdown-item" href="#">Кейсы</a></li>
-            <li><a class="dropdown-item" href="#">Прайс</a></li>
-            <li><a class="dropdown-item" href="#">Отзывы</a></li>
-            <li><a class="dropdown-item" href="#">Контакты</a></li>
+            <li><a class="dropdown-item" href="#about">Обо мне</a></li>
+            <li><a class="dropdown-item" href="#whatican">Услуги</a></li>
+            <li><a class="dropdown-item" href="#sec2">Кейсы</a></li>
+            <li><a class="dropdown-item" href="#cost">Прайс</a></li>
+            <li><a class="dropdown-item" href="#sec3">Отзывы</a></li>
+            <li><a class="dropdown-item" href="#contacts">Контакты</a></li>
   </ul>
 </div>  </div> </div></div>
     </nav>
@@ -61,15 +61,32 @@
     <input type="button" value="Обо мне">
     <input type="button" value="Мои работы">
 </div> </div></div></div>
-   </section>
+   </section> 
+   <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title px-5" id="staticBackdropLabel">На этом сайте используются файлы cookie</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        Используя этот веб-сайт, Вы даёте согласие на обработку файлов cookie, пользовательских данных в целях функционирования сайта, проведения ретаргетинга и проведения статистических исследований и обзоров. Если Вы не хотите, чтобы Ваши данные обрабатывались, Вы должны покинуть данный сайт.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Ok, I agree</button>
+      </div>
+    </div>
+  </div>
+</div>
+   <div id="about"></div>
 <section class="about">
-    <div class="container h-100">
+    <div class="container">
          <div class="text-center">
             <h3>ОБО МНЕ</h3>
           <img src="../src/img/Cherta.png" class="rounded mt-4" alt=""> 
           </div>
-          <div class="photo text-center mt-5 ">
-              <img src="../src/img/photo1.png" class="mt-4" alt="">
+          <div class="photo element-animation text-center mt-5 ">
+              <img data-src="../src/img/download-1873539_960_720.png" src="../src/img/photo1.png" class="mt-4" alt=""> 
               </div>
               <div class="row justify-content-center">
               <div class="text  col-8  mt-4">
@@ -86,8 +103,8 @@ facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commod
           </div></div>
 </section>
 <section class="whatican">
-    <section class="sec1">
-     <div class="container">
+    <section class="sec1" id="whatican">
+     <div class="container element-animation">
          <div class="text-center pt-3">
             <h3>ЧТО Я УМЕЮ</h3>
           <img src="../src/img/Cherta.png" class="rounded mt-4" alt=""> 
@@ -119,7 +136,7 @@ facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commod
           </div> </div>
           </div></div>
           </section>
-          <section class="sec2">  
+          <section class="sec2" id="sec2">  
           <div class="container 1">
          <div class="text-center pt-3">
             <h3>КЕЙСЫ</h3>
@@ -128,9 +145,28 @@ facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commod
           <div class="row centered ">
             <div class="text text-center">
              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed Dapibus leo nec ornare diamcoccodo nibh ante facilisis.</div>
-             <div class="col-12">
-             <img src="../src/img/photo2.png" class="img-fluid rounded mx-auto d-block " alt=""></div>
               </div>
+              <div class="slider">
+    <div class="item">
+        <img class="image-link" src="../src/img/photo2.png" href="../src/img/photo2.png" alt="Первый слайд">
+    </div>
+
+    <div class="item">
+        <img class="image-link" src="../src/img/jpeg@1x.jpg" href="../src/img/jpeg@1x.jpg" alt="Второй слайд">  
+    </div>
+    <div class="item">
+        <img class="image-link" src="../src/img/wruiw3ds_yihzasjgytn8vul1de.png" href="../src/img/wruiw3ds_yihzasjgytn8vul1de.png" data-src="" alt="Третий слайд">
+    </div>
+
+    <a class="prev" onclick="minusSlide()">&#10094;</a>
+    <a class="next" onclick="plusSlide()">&#10095;</a>
+</div>
+
+<div class="slider-dots">
+    <span class="slider-dots_item" onclick="currentSlide(1)"></span> 
+    <span class="slider-dots_item" onclick="currentSlide(2)"></span> 
+    <span class="slider-dots_item" onclick="currentSlide(3)"></span> 
+</div>
              <div class="row justify-content-center pt-3 ms-3">
                  <div class="pr col-xl-2 col-lg-2 col-xxl-1 col-md-2 ">
                   <h4>CLIENT:</h4>
@@ -148,7 +184,8 @@ facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commod
              </div></div></div>
           </section>
 </section>
- <div class="container cost ">
+<section>
+ <div class="container cost " id="cost">
     <div class="row justify-content-center">
         <div class="col-lg-10  col-md-10 col-sm-12">
      <div class="box">
@@ -184,10 +221,11 @@ facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commod
        <div class="cost1 col-3 offset-6 text-center" id="itogo" >0 р.</div></div>
 <div class="site text-center pb-5"><input type="button" onclick="calculate()" value="Оставить заявку">
     </div>
-     </div></div></div></div></div>
+     </div></div></div></div></div></section>
      <section class="stat">
      <div class="container st">
-         <div class="text-center pt-3">
+        <div class="element-animation">
+         <div class="text-center pt-3 ">
             <h3>НЕМНОГО СТАТИСТИКИ</h3>
           <img src="../src/img/Cherta.png" class="rounded mt-4" alt=""> 
           </div>
@@ -213,14 +251,23 @@ facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commod
     НАГРАД ПОЛУЧЕНО   
           </div>
           </div>
-          </div></section>
+          </div></div></section>
+          <section id="sec3">
           <div class="container">
              <div class="text-center pt-3">
             <h3>ОТЗЫВЫ</h3>
           <img src="../src/img/Cherta.png" class="rounded mt-4" alt=""> 
           </div> 
-           <div class="photo text-center mt-5 ">
-              <img src="../src/img/photo.png" class="mt-4" alt="">
+          <div id="carouselExampleIndicators" class="carousel carousel-dark slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+     <div class="photo text-center mt-5 ">
+              <img src="../src/img/photo.png" class="photo1 mt-4" alt="">
               </div> 
              <figure class="text-center">
   <blockquote class="blockquote">
@@ -232,9 +279,51 @@ facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commod
     Михаил, Ген директор  <cite title="Source Title">ПАО “Газпром”</cite>
   </figcaption>
 </figure>
-          </div>
+    </div>
+    <div class="carousel-item">
+      <div class="photo text-center mt-5 ">
+              <img src="../src/img/man.jpg" class="photo1 mt-4" alt="">
+              </div> 
+             <figure class="text-center">
+  <blockquote class="blockquote">
+    <div class="row justify-content-center">
+    <div class="recall col-8 mt-5 px-3 ">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at duis sed dapidus leo nec ornare diam.</p> </div></div>
+  </blockquote>
+  <figcaption class="blockquote-footer">
+Евгений, Представитель  <cite title="Source Title">ЗАО "МТБанк”</cite>
+  </figcaption>
+</figure>
+    </div>
+    <div class="carousel-item">
+     <div class="photo text-center mt-5 ">
+              <img src="../src/img/man.jpg" class="photo1 mt-4" alt="">
+              </div> 
+             <figure class="text-center">
+  <blockquote class="blockquote">
+    <div class="row justify-content-center">
+    <div class="recall col-8 mt-5 px-3 ">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at duis sed dapidus leo nec ornare diam.</p> </div></div>
+  </blockquote>
+  <figcaption class="blockquote-footer">
+    Александр, Представитель  <cite title="Source Title">Красный пищевик</cite>
+  </figcaption>
+</figure>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"  data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Предыдущий</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"  data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Следующий</span>
+  </button>
+</div>
+        
+          </div></section>
           <footer>
-          <section class="contacts">
+          <section class="contacts" id="contacts">
           <div class="container">
           <div class="text-center pt-2">
             <h3>МОИ КОНТАКТЫ</h3>
@@ -283,8 +372,29 @@ facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commod
 <div class="recktangle">
     <p>Copyright © 2021 Андрей Браун. Design by Web</p>
 </div>
+   <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Launch demo modal
+</button>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
     </footer>
     <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/myscript.js"></script>
 
